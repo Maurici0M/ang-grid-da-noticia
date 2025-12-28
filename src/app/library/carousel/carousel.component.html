@@ -1,1 +1,12 @@
-<p>carousel works!</p>
+<swiper-container
+  [navigation]="true"
+  [pagination]="{ clickable: true, dynamicBullets: true }"
+  [slidesPerView]="3"
+  [spaceBetween]="30"
+  [rewind]="true"
+  [breakpoints]="swiperBreakPoints"
+>
+  <swiper-slide *ngFor="let item of dataCard">
+    <app-card [dataCard]="item"></app-card>
+  </swiper-slide>
+</swiper-container>

@@ -1,6 +1,8 @@
 :host {
   --border-radius-image: calc(var(--border-radius-card) - 2px) calc(var(--border-radius-card) - 2px) 0 0;
 
+  --box-shadow-card: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+
   --box-shadow-image: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 
   --border-color-card-dafault: solid black 3px;
@@ -17,14 +19,19 @@
 
   --line-height-text: 1.3em;
 
+  --width-card: 300px;
+
+  --height-card: 440px;
+
 }
 
 @mixin card-container {
   background: var(--background-card-default);
-  border: var(--border-color-card-dafault);
+  //border: var(--border-color-card-dafault);
   border-radius: var(--border-radius-card);
-  width: 300px;
-  height: 440px;
+  box-shadow: var(--box-shadow-card);
+  width: var(--width-card);
+  height: var(--height-card);
 }
 
 @mixin line-limit($limit) {
@@ -40,14 +47,22 @@
 
 .card {
 
+  &:hover {
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  }
+
   &.container {
+
+    &:hover {
+     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    }
 
     @include card-container();
 
     .content {
 
       &.image {
-        height: 50%;
+        height: calc(var(--height-card) / 2);
 
         img {
           border-radius: var(--border-radius-image);
