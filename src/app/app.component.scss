@@ -1,4 +1,5 @@
-.container {
-  display: flex;
-  gap: 45px;
+:host {
+  --max-width: 1770px;
 }
+
+
