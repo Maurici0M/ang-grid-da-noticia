@@ -2,4 +2,8 @@
   --max-width: 1770px;
 }
 
-
+.container-master {
+  &.content {
+    padding-left: 5rem;
+  }
+}

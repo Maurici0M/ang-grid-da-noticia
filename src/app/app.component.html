@@ -1,2 +1,12 @@
-<app-carousel></app-carousel>
-
+<section class="container-master">
+  <app-sidenav
+    (changePage)="handleChangePage($event)"
+  ></app-sidenav>
+  <div class="container-master content">
+    <app-container-pages
+      [typePage]="currentPage"
+      (changePage)="handleChangePage($event)"
+    ></app-container-pages>
+  </div>
+  <p style="margin-left: 5rem">Footer</p>
+</section>
