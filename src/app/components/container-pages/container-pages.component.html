@@ -1,0 +1,21 @@
+@if(typePage.current === 'home') {
+  <app-home
+    (changePage)="handleChangePage($event)"
+  ></app-home>
+} @else if (typePage.current === 'technology') {
+  <app-technology
+    (changePage)="handleChangePage($event)"
+  ></app-technology>
+} @else if (typePage.current === 'culinary') {
+  <app-culinary
+    (changePage)="handleChangePage($event)"
+  >
+  </app-culinary>
+} @else if (typePage.current === 'about') {
+  <app-about-us
+    (changePage)="handleChangePage($event)"
+  >
+  </app-about-us>
+}
+
+
