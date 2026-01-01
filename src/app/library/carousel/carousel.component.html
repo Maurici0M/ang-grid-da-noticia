@@ -1,10 +1,11 @@
 <swiper-container
-  [navigation]="true"
-  [pagination]="{ clickable: true, dynamicBullets: true }"
-  [slidesPerView]="3"
-  [spaceBetween]="30"
-  [rewind]="true"
-  [breakpoints]="swiperBreakPoints"
+  [navigation]="swiperConfigurations.navigation"
+  [pagination]="swiperConfigurations.pagination"
+  [slidesPerView]="swiperConfigurations.slidesPerView"
+  [spaceBetween]="swiperConfigurations.spaceBetween"
+  [rewind]="swiperConfigurations.rewind"
+  [breakpoints]="swiperConfigurations.breakpoints"
+  autoplay-delay="6000"
 >
   <swiper-slide *ngFor="let item of dataCard">
     <app-card [dataCard]="item"></app-card>

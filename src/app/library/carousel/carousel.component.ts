@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { CardPrimary } from '../card/interface';
 import { CarouselService } from '../../services/carousel-service.service';
 
@@ -11,7 +11,7 @@ import { CarouselService } from '../../services/carousel-service.service';
 
 export class CarouselComponent implements OnInit {
 
-  dataCard: CardPrimary[] = []
+  @Input() dataCard: CardPrimary[] = [];
 
   swiperBreakPoints = {
     0: { slidesPerView: 1, spaceBetween: 0 },
@@ -20,26 +20,28 @@ export class CarouselComponent implements OnInit {
     1300: {slidesPerView: 4, spaceBetween: 30}
   }
 
+  swiperConfigurations: any = {
+    navigation: true,
+
+    pagination: {
+      clickable: true,
+      dynamicBullets: true
+    },
+
+    slidesPerView: 3,
+
+    spaceBetween: 30,
+
+    rewind: false,
+
+    breakpoints: this.swiperBreakPoints,
+  }
+
   constructor(
     private carouselService: CarouselService
   ) {}
 
   ngOnInit(): void {
-    this.getService();
-  }
-
-  getService() {
-    this.carouselService.getCards().subscribe(
-      {
-        next: (data) => {
-          this.dataCard = data.card;
-        },
-
-        error: (error) => {
-          console.log("Houve um erro ao buscar os dados no servidor! ", error);
-        }
-      }
-    );
   }
 
 }
