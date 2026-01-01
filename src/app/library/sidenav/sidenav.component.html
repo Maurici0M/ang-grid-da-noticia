@@ -1,0 +1,28 @@
+<div class="sidenav" [ngClass]="collapsed ? 'sidenav-collapsed' : 'asda'">
+  <div class="logo-container">
+    <button class="logo" (click)="toggleCollapseSidenav()">G</button>
+    <div class="logo-text" *ngIf="collapsed === true">Grid da Notícia</div>
+    <button class="btn-close"
+      *ngIf="collapsed === true"
+      matTooltip="Fechar Menu"
+      (click)="toggleCollapseSidenav()"
+      >
+      <mat-icon>navigate_before</mat-icon>
+    </button>
+  </div>
+
+  <ul class="sidenav-nav">
+    <li class="sidenav-nav-item" *ngFor="let item of dataSidenav">
+      <a class="sidenav-nav-link"
+        [matTooltip]="collapsed === false ? item.text : ''"
+        (click)="goToPage(item.route)"
+      >
+        <i class="sidenav-link-icon">
+          <mat-icon>{{ item.icon }}</mat-icon>
+        </i>
+        <span class="sidenav-link-text" *ngIf="collapsed === true"> {{ item.text }}</span>
+      </a>
+    </li>
+  </ul>
+
+</div>

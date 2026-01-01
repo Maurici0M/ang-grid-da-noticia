@@ -1,0 +1,116 @@
+.sidenav {
+  transition: all ease 0.25s;
+  background: blueviolet;
+  position: fixed;
+  height: 100vh;
+  z-index: 999;
+  width: 5rem;
+  top: 0;
+
+  &.sidenav-collapsed {
+    width: 20rem ;
+  }
+
+  .logo-container {
+    padding: 0.938rem 0.938rem 0 0.938rem;
+    align-items: center;
+    display: flex;
+    width: 100%;
+
+    .logo {
+      border-radius: 0.313rem;
+      background: #fff;
+      text-align: center;
+      padding: 0.313rem;
+      font-weight: 900;
+      cursor: pointer;
+      min-width: 3rem;
+      font-size: 24px;
+      border: none;
+      width: 3rem;
+    }
+
+    .logo-text {
+      margin-left: 1.5rem;
+      font-size: 22px;
+      font-weight: 700;
+      color: #fff;
+
+      white-space: nowrap;
+    }
+
+    .btn-close {
+      background-color: transparent;
+      border-radius: 50%;
+      margin-left: auto;
+      cursor: pointer;
+      border: none;
+      height: 2rem;
+      width: 2rem;
+
+      mat-icon {
+        color: #fff;
+
+        transform: rotate(180deg);
+        transition: all ease-in-out 0.5s;
+
+        &:hover {
+          transform: rotate(0deg);
+        }
+      }
+    }
+  }
+
+  .sidenav-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.938rem;
+    margin: 0;
+    list-style: none;
+    height: calc(100% - 3.65rem);
+    // cursor: pointer;
+
+    .sidenav-nav-item {
+      width: 100%;
+      margin-bottom: 0.625rem;
+
+      &:hover {
+        .sidenav-nav-link {
+          background: #fff;
+          color: #000;
+        }
+      }
+
+
+      .sidenav-nav-link {
+        display: flex;
+        gap: 1.5rem;
+        align-items: center;
+        height: 3rem;
+        color: #f3f3f3;
+        text-decoration: none;
+        transition: all ease-in-out 0.3s;
+
+        border-radius: 0.625rem;
+
+        //para que as letras nao tentem ficar responsivas na abertura do sidenav
+        white-space: nowrap;
+
+        .sidenav-link-icon {
+          font-size: 22px;
+          //width: 2rem;
+          max-width: 2rem;
+          margin: 0 0.78rem;
+          text-align: center;
+          display: flex;
+          justify-content: center;
+        }
+
+        .sidenav-link-text {
+          transition: all 0.4s;
+        }
+      }
+    }
+  }
+}
