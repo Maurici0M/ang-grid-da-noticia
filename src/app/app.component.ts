@@ -9,14 +9,14 @@ import { TypePage } from './components/container-pages/i-type-page';
 })
 export class AppComponent {
 
-  currentPage: TypePage = {
+  public currentPage: TypePage = {
     current: 'home'
   };
 
   constructor() {
   }
 
-  handleChangePage(event: any) {
+  public handleChangePage(event: any) {
     this.currentPage = {
       current: event
     }

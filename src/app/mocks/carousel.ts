@@ -1,6 +1,6 @@
 import { CarouselData } from '../interfaces/carousel/i-carousel';
 
-export const MOCK_CAROUSEL: CarouselData = {
+export const MOCK_MEXT: CarouselData = {
   card: [
     {
       title: 'Pesquisa (Pós-Graduação)',

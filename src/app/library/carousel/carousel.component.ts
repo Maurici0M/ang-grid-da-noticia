@@ -9,7 +9,7 @@ import { CarouselService } from '../../services/carousel-service.service';
   styleUrl: './carousel.component.scss'
 })
 
-export class CarouselComponent implements OnInit {
+export class CarouselComponent {
 
   @Input() dataCard: CardPrimary[] = [];
 
@@ -40,8 +40,5 @@ export class CarouselComponent implements OnInit {
   constructor(
     private carouselService: CarouselService
   ) {}
-
-  ngOnInit(): void {
-  }
 
 }
