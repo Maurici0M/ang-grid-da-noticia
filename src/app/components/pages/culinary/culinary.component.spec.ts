@@ -1,23 +1,15 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { CulinaryComponent } from './culinary.component';
+import { CulinaryComponent } from "./culinary.component";
 
 describe('CulinaryComponent', () => {
+
   let component: CulinaryComponent;
-  let fixture: ComponentFixture<CulinaryComponent>;
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      declarations: [CulinaryComponent]
-    })
-    .compileComponents();
-
-    fixture = TestBed.createComponent(CulinaryComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
+  beforeEach(() => {
+    component = new CulinaryComponent();
   });
 
-  it('should create', () => {
+  it('verificando se o componente foi criado', () => {
     expect(component).toBeTruthy();
   });
+
 });

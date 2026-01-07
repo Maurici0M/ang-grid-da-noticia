@@ -66,8 +66,6 @@ describe('HomeComponent', () => {
 
     it('Verificando se o servico é chamado corretamente e armazena os dados na variavel dataCard para criar o array de cards', () => {
       // --- act
-      carouselService.getCards.and.returnValue(of(MOCK_HOME));
-
       component.getCardsCarousel();
 
       // --- assert
