@@ -42,7 +42,11 @@ export class HomeComponent implements OnInit {
   }
 
   goToPage(value: any) {
-    this.changePage.emit(value);
+    const namePage: TypePage = {
+      current: value
+    }
+
+    this.changePage.emit(namePage);
   }
 
 }
