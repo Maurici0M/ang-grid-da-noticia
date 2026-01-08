@@ -16,7 +16,7 @@ function returnName(number: number): PageCard {
         return {name: "technology"};
 
       default:
-        return {name: "home"};
+        return {name: 'error' as any}
   };
 }
 
@@ -61,6 +61,15 @@ describe('CarouselService', () => {
         expect(data).toEqual(MOCK_TECHNOLOGY);
       });
 
+    });
+
+    it('verificando se a funcao foi chamada uma vez e retornou os dados para o caso da condicao cair no DEFAULT', () => {
+      component.getCards(returnName(5)).subscribe(data => {
+        dataCard = data;
+      });
+
+      // como o mock nao existe, deve retornar um array vazio
+      expect(dataCard).toEqual([] as any);
     });
 
   });

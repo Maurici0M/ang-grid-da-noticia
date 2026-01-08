@@ -3,6 +3,7 @@ import { CarouselService, PageCard } from '../../../services/carousel-service.se
 import { UtilsService } from '../../../shared/functions/utils.service';
 import { of } from 'rxjs';
 import { MOCK_HOME } from '../../../mocks/carousel';
+import { TypePage } from '../../container-pages/i-type-page';
 
 describe('HomeComponent', () => {
   let component: HomeComponent;
@@ -14,6 +15,10 @@ describe('HomeComponent', () => {
   let spyNgOnInit: jasmine.Spy;
 
   let spyGetCardsCarousel: jasmine.Spy;
+
+  let spyOutputChangePage: jasmine.Spy;
+
+  let spyGoToPage: jasmine.Spy;
 
   beforeEach(() => {
     carouselService = jasmine.createSpyObj('CarouselService', ['getCards']);
@@ -82,6 +87,27 @@ describe('HomeComponent', () => {
 
       expect(component.dataCard).toBe(MOCK_HOME.card);
     });
+
+  });
+
+  describe('goToPage', () => {
+      let routeName: TypePage = {
+        current: 'home'
+      };
+
+      beforeEach(() => {
+        spyOutputChangePage = spyOn(component.changePage, 'emit').and.callThrough();
+
+        spyGoToPage = spyOn(component, 'goToPage').and.callThrough();
+      });
+
+      it('verificando se a funcao quando chamada, emitiu o evento corretamente', () => {
+        component.goToPage(routeName.current);
+
+        expect(spyGoToPage).toHaveBeenCalledWith('home');
+
+        expect(spyOutputChangePage).toHaveBeenCalledWith(routeName);
+      });
 
   });
 
