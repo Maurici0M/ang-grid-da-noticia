@@ -6,9 +6,8 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test",
-    "set:brave": "export CHROME_BIN='/c/Program Files/BraveSoftware/Brave-Browser/Application/brave.exe'",
-    "test:coverage": "npm run set:brave && ng test --code-coverage --no-watch",
+    "test": "set CHROME_BIN=C:\\Program Files\\BraveSoftware\\Brave-Browser\\Application\\brave.exe&& ng test",
+    "test:coverage": "set CHROME_BIN=C:\\Program Files\\BraveSoftware\\Brave-Browser\\Application\\brave.exe&& ng test --code-coverage --no-watch",
     "serve:ssr:ang-carrossel-de-musicas": "node dist/ang-carrossel-de-musicas/server/server.mjs"
   },
   "private": true,
