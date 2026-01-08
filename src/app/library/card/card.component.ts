@@ -7,11 +7,7 @@ import { CardPrimary } from './interface';
   templateUrl: './card.component.html',
   styleUrl: './card.component.scss'
 })
-export class CardComponent implements OnChanges {
+export class CardComponent {
   @Input() dataCard!: CardPrimary;
-
-  ngOnChanges(changes: SimpleChanges): void {
-    console.log(this.dataCard);
-  }
 
 }

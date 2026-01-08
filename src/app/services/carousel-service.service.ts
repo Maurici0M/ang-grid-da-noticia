@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 
 import { Observable, of } from 'rxjs';
-import { MOCK_CAROUSEL, MOCK_CULINARY, MOCK_HOME, MOCK_TECHNOLOGY } from '../mocks/carousel';
+import { MOCK_MEXT, MOCK_CULINARY, MOCK_HOME, MOCK_TECHNOLOGY } from '../mocks/carousel';
 import { CarouselData } from '../interfaces/carousel/i-carousel';
 
 export interface PageCard {
@@ -17,20 +17,20 @@ export class CarouselService {
 
   getCards(page: PageCard):Observable<CarouselData> {
     switch (page.name) {
-      case page.name = 'home':
+      case 'home':
         return of(MOCK_HOME);
 
-      case page.name = 'about':
-        return of();
+      case 'about':
+        return of([] as any);
 
-      case page.name = 'culinary':
+      case 'culinary':
         return of(MOCK_CULINARY);
 
-      case page.name = 'technology':
+      case 'technology':
         return of(MOCK_TECHNOLOGY);
 
       default:
-        return of();
+        return of([] as any);
     }
   }
 

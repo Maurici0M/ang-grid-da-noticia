@@ -1,16 +1,76 @@
-import { TestBed } from '@angular/core/testing';
+import { CarouselService, PageCard } from "./carousel-service.service";
+import { MOCK_CULINARY, MOCK_HOME, MOCK_TECHNOLOGY } from "../mocks/carousel";
 
-import { CarouselService } from './carousel-service.service';
+function returnName(number: number): PageCard {
+  switch(number) {
+    case 1:
+      return {name: "home"};
 
-describe('CarouselServiceService', () => {
-  let service: CarouselService;
+      case 2:
+        return {name: "about"};
+
+      case 3:
+        return {name: "culinary"};
+
+      case 4:
+        return {name: "technology"};
+
+      default:
+        return {name: 'error' as any}
+  };
+}
+
+describe('CarouselService', () => {
+  let component: CarouselService;
 
   beforeEach(() => {
-    TestBed.configureTestingModule({});
-    service = TestBed.inject(CarouselService);
+    component = new CarouselService();
   });
 
-  it('should be created', () => {
-    expect(service).toBeTruthy();
+  it('verificando se o componente foi criado', () => {
+    expect(component).toBeTruthy();
+  });
+
+  describe('getCards', () => {
+
+    let dataCard: any;
+
+    it('verificando se a funcao foi chamada uma vez e retornou os dados para o parametro HOME corretamente', () => {
+      component.getCards(returnName(1)).subscribe(data => {
+        expect(data).toEqual(MOCK_HOME);
+      });
+    });
+
+    it('verificando se a funcao foi chamada uma vez e retornou os dados para o parametro ABOUT corretamente', () => {
+      component.getCards(returnName(2)).subscribe(data => {
+        dataCard = data;
+      });
+
+      // como o mock nao existe, deve retornar um array vazio
+      expect(dataCard).toEqual([]);
+    });
+
+    it('verificando se a funcao foi chamada uma vez e retornou os dados para o parametro CULINARY corretamente', () => {
+      component.getCards(returnName(3)).subscribe(data => {
+        expect(data).toEqual(MOCK_CULINARY);
+      });
+    });
+
+    it('verificando se a funcao foi chamada uma vez e retornou os dados para o parametro TECHNOLOGY corretamente', () => {
+      component.getCards(returnName(4)).subscribe(data => {
+        expect(data).toEqual(MOCK_TECHNOLOGY);
+      });
+
+    });
+
+    it('verificando se a funcao foi chamada uma vez e retornou os dados para o caso da condicao cair no DEFAULT', () => {
+      component.getCards(returnName(5)).subscribe(data => {
+        dataCard = data;
+      });
+
+      // como o mock nao existe, deve retornar um array vazio
+      expect(dataCard).toEqual([] as any);
+    });
+
   });
 });

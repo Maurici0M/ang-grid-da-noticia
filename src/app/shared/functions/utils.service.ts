@@ -9,8 +9,9 @@ export class UtilsService {
   constructor() { }
 
   getPageCard(page: any) : PageCard {
+
     const typePage: PageCard = {
-      name: page
+      name: page.toLowerCase()
     }
 
     return typePage;
