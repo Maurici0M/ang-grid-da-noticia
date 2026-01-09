@@ -14,6 +14,8 @@ import { SidenavComponent } from './library/sidenav/sidenav.component';
 import { ContainerPagesComponent } from './components/container-pages/container-pages.component';
 import { CulinaryComponent } from './components/pages/culinary/culinary.component';
 import { AboutUsComponent } from './components/pages/about-us/about-us.component';
+import { ErrorComponent } from './components/pages/error/error.component';
+import { TitleComponent } from './library/title/title.component';
 
 
 @NgModule({
@@ -27,6 +29,8 @@ import { AboutUsComponent } from './components/pages/about-us/about-us.component
     ContainerPagesComponent,
     CulinaryComponent,
     AboutUsComponent,
+    ErrorComponent,
+    TitleComponent,
   ],
   imports: [
     BrowserModule,
