@@ -1,13 +1,19 @@
-<swiper-container
-  [navigation]="swiperConfigurations.navigation"
-  [pagination]="swiperConfigurations.pagination"
-  [slidesPerView]="swiperConfigurations.slidesPerView"
-  [spaceBetween]="swiperConfigurations.spaceBetween"
-  [rewind]="swiperConfigurations.rewind"
-  [breakpoints]="swiperConfigurations.breakpoints"
-  autoplay-delay="6000"
->
-  <swiper-slide *ngFor="let item of dataCard">
-    <app-card [dataCard]="item"></app-card>
-  </swiper-slide>
-</swiper-container>
+  @if(isErrorService == false) {
+    <swiper-container
+      [navigation]="swiperConfigurations.navigation"
+      [pagination]="swiperConfigurations.pagination"
+      [slidesPerView]="swiperConfigurations.slidesPerView"
+      [spaceBetween]="swiperConfigurations.spaceBetween"
+      [rewind]="swiperConfigurations.rewind"
+      [breakpoints]="swiperConfigurations.breakpoints"
+      autoplay-delay="6000"
+    >
+      <swiper-slide *ngFor="let item of dataCard">
+        <app-card [dataCard]="item"></app-card>
+      </swiper-slide>
+    </swiper-container>
+  } @else {
+    <app-error [dataError]="dataErrorService">
+    </app-error>
+  }
+

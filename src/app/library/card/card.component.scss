@@ -85,16 +85,18 @@
 
         h3 {
           color: var(--color-title-card);
-          text-align: justify;
+          text-align: start;
           font-weight: 900;
-          font-size: 18px;
+          font-size: 17px;
 
           @include line-limit(4);
         }
 
         p {
           color: var(--color-description-card);
-          font-size: 18px;
+          font-size: 17px;
+          font-weight: 500;
+          text-align: justify;
 
           @include line-limit(5);
         }
