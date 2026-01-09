@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="text">
+    <h1>{{ dataError.title }}</h1>
+    <p>{{ dataError.description }}</p>
+
+    @if(typeError.model == 'not-found') {
+      <button (click)="reloadPage()">Ir para Página Inicial</button>
+    }
+  </div>
+  <div class="image-container">
+    <img src={{dataError.srcImg}} alt={{dataError.altImg}}>
+  </div>
+
+</div>
