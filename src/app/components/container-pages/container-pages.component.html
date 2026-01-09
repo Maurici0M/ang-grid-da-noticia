@@ -16,6 +16,20 @@
     (changePage)="handleChangePage($event)"
   >
   </app-about-us>
+} @else if (typePage.current === 'error-service') {
+    <app-error
+      (changePage)="handleChangePage($event)"
+      [typeError]="getTypeError('service')"
+      [dataError]="dataErrorService"
+    >
+    </app-error>
+} @else {
+  <app-error
+    (changePage)="handleChangePage($event)"
+    [typeError]="getTypeError('not-found')"
+    [dataError]="dataErrorNotFound"
+  >
+  </app-error>
 }
 
 
