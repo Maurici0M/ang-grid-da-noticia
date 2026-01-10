@@ -118,7 +118,7 @@ export const MOCK_HOME: CarouselData = {
       altImg: 'Logo do Google Bard',
       link: 'https://g1.globo.com/tecnologia/noticia/2023/07/13/bard-o-chatgpt-do-google-e-lancado-no-brasil-veja-como-funciona.ghtml',
     },
-    {
+    /*{
       title: 'O Legado do Helicóptero Ingenuity Em Marte.',
       description:
         'Em 19 de abril de 2021, um pequeno helicóptero chamado Ingenuity fez história ao realizar o primeiro voo motorizado e controlado em outro planeta.',
@@ -165,7 +165,7 @@ export const MOCK_HOME: CarouselData = {
         'https://s2-receitas.glbimg.com/LNr5zJu-Fo1pY5TZjk2iCEOS2PE=/0x0:5184x3456/1000x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_1f540e0b94d8437dbbc39d567a1dee68/internal_photos/bs/2022/B/J/TwmuA3QfaNQTXLzLwETQ/rapioca-recheada-com-morango.jpg',
       altImg: 'Imagem de uma tapioca',
       link: 'https://receitas.globo.com/blog/alimentacao-e-saude/tapioca-engorda-conheca-mitos-e-verdades-do-alimento.ghtml',
-    },
+    },*/
   ],
 };
 
@@ -293,7 +293,7 @@ export const MOCK_TECHNOLOGY: CarouselData = {
       link: 'https://www.estadao.com.br/link/discord-o-que-e-e-como-funciona-o-app-para-gamers-que-virou-foco-de-abusos-contra-jovens/',
     },
 
-    {
+    /*{
       title:
         'Samsung desafia lealdade ao iPhone com paródia de terror em campanha do Galaxy Z Flip 5.',
       description:
@@ -397,6 +397,6 @@ export const MOCK_TECHNOLOGY: CarouselData = {
         'https://s3.sa-east-1.amazonaws.com/proz-joy-class/production/instances/12de7cca531c4dbdb6e42c937f21c1a81703272239039.png',
       altImg: 'Logo Portal Tech - Proz, Amazon e Meta',
       link: 'https://pages.prozeducacao.com.br/proz-tecnologia',
-    },
+    },*/
   ],
 };
