@@ -2,6 +2,16 @@
 
 <p align='justify'>Este é um site desenvolvido por <a target="_blank" href='https://www.linkedin.com/in/mauricio-marques-costa-994b25210/'>Mauricio</a> e <a target="_blank" href='https://www.linkedin.com/in/michael-paes-050817200/'>Michael</a>, dois estudantes que tiveram o seu primeiro contato com a programação, durante um programa de capacitação à tecnologia com foco em front-end, oferecido por uma parceria entre <a href='https://pages.prozeducacao.com.br/proz-tecnologia'> PROZ, AMAZON, PORTAL TECH e META</a>. 🤝</p> 
 
+<br>
+
+<div style = 'display:flex; justify-content: center;'>
+
+<img align='center' src="https://github.com/Maurici0M/grid_da_noticia_grupo5_proz/raw/main/assets/images/apoiadores_projeto.png" alt="Empresas Apoiadoras do Projeto">
+
+</div>
+
+<br>
+
 <p>Nessa versão do site, foi utilizado o Angular Framework para recriar o projeto original, adicionando recursos como:</p>
 
   * Componentização
@@ -14,17 +24,7 @@
   * TypeScript
   * Renderização Dinâmica das Páginas (Utilizando Input's e Output's)
 
-<br>
-
-<div style = 'display:flex; justify-content: center;'>
-
-<img align='center' src="./assets/images/apoiadores_projeto.png" alt="Empresas Apoiadoras do Projeto">
-
-</div>
-
-<br>
-
-<p align='justify'>Nós nunca havíamos programado antes, e já em nossa primeira experiência com a área de programação, fizemos o desenvolvimento de um site de notícias, e apresentamos ele como parte final do Projeto Integrador, onde, o principal objetivo, foi mostrar na prática, os conhecimentos que aprendemos durante as aulas, repassando eles para um site, que no nosso caso, foi o <strong>Grid da Notícia</strong>, apresentado no dia 24/08/2023. 😊
+<!-- <p align='justify'>Nós nunca havíamos programado antes, e já em nossa primeira experiência com a área de programação, fizemos o desenvolvimento de um site de notícias, e apresentamos ele como parte final do Projeto Integrador, onde, o principal objetivo, foi mostrar na prática, os conhecimentos que aprendemos durante as aulas, repassando eles para um site, que no nosso caso, foi o <strong>Grid da Notícia</strong>, apresentado no dia 24/08/2023. 😊 
 
 <br>
 
@@ -43,6 +43,8 @@
 <br>
 
 <img src="./assets/images/grid_tela_apresentacao3.png" alt="Imagem do Site Grid da Notícia">
+
+-->
 
 <br>
 
@@ -63,13 +65,20 @@
 
 <p align='justify'>⚙️ Para o desenvolvimento, utilizamos: 
 
-<div style = 'display:flex; gap: 1%'>
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain-wordmark.svg" style='height: 50px' />
-
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-plain-wordmark.svg" style='height: 50px' />
-
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg" style='height: 50px'/>
-
+<div style = 'display:flex; gap: 1%; align-items: center'>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angular/angular-original.svg" style='height: 50px' />
+    
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain-wordmark.svg" style='height: 50px' />
+  
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sass/sass-original.svg" style='height: 50px' />          
+  
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" style='height: 50px' />
+  
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jasmine/jasmine-original-wordmark.svg" style='height: 50px' />
+  
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angularmaterial/angularmaterial-original.svg" style='height: 50px' />
+  
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vercel/vercel-original.svg" style='height: 50px' /> 
 </div>
 
 <br>
@@ -93,3 +102,4 @@
 Muito obrigado! 😉
 
 <br>
+
