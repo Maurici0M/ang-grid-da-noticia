@@ -84,7 +84,7 @@ describe('TechnologyComponent', () => {
 
       expect(spyGoToPage).toHaveBeenCalledWith('home');
 
-      expect(spyOutputChangePage).toHaveBeenCalledWith(routeName);
+      expect(spyOutputChangePage).toHaveBeenCalledWith(routeName.current);
     });
   });
 });
