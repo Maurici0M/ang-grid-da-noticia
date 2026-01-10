@@ -16,6 +16,7 @@
       <a class="sidenav-nav-link"
         [matTooltip]="collapsed === false ? item.text : ''"
         (click)="goToPage(item.route)"
+        [href]="'#'+item.route"
       >
         <i class="sidenav-link-icon">
           <mat-icon>{{ item.icon }}</mat-icon>
@@ -24,5 +25,14 @@
       </a>
     </li>
   </ul>
+
+</div>
+
+<div class="sidenav-horizontal">
+  <div class="sidenav-container">
+    <div class="logo">
+      <h1>GRID da Notícia</h1>
+    </div>
+  </div>
 
 </div>

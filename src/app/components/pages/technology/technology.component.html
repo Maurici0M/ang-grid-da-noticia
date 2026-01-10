@@ -1,6 +1,19 @@
-<app-carousel
-  [dataCard]="dataCard"
->
-</app-carousel>
+@if(isErrorService == false) {
+  <app-title
+    [title]="titlePage[0]"
+  >
+  </app-title>
 
-<button (click)="goToPage('home')">Ir para Home</button>
+  <app-carousel
+    [dataCard]="dataCard"
+  >
+  </app-carousel>
+
+  <!-- Adicionar o restante da pagina dentro desta condicional -->
+  @if(dataCard.length > 4) {
+    <app-title
+      [title]="titlePage[1]"
+    >
+    </app-title>
+  }
+}

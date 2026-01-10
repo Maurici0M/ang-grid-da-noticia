@@ -1,4 +1,5 @@
 import { CardPrimary } from '../../../library/card/interface';
+import { PageTitle } from '../../../library/title/title.component';
 import { CarouselService, PageCard } from '../../../services/carousel-service.service';
 import { UtilsService } from '../../../shared/functions/utils.service';
 import { ChangePage, TypePage } from './../../container-pages/i-type-page';
@@ -13,7 +14,19 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 export class TechnologyComponent implements OnInit{
   @Output() changePage: EventEmitter<ChangePage> = new EventEmitter<ChangePage>;
 
-  dataCard: CardPrimary[] = [];
+  public isErrorService: boolean = false;
+
+  public dataCard: CardPrimary[] = [];
+
+  public titlePage: PageTitle[] =[
+    {
+       text: 'Tecnologia: Veja as principais notícias sobre IA, Jogos Eletrônicos, Informática, e tudo do mundo tech.'
+    },
+
+    {
+      text: 'Conteúdos extras que podem te interessar:'
+    }
+  ]
 
   constructor(
     private carouselService: CarouselService,
@@ -22,11 +35,11 @@ export class TechnologyComponent implements OnInit{
 
   }
 
-  ngOnInit(): void {
+  public ngOnInit(): void {
     this.getCardsCarousel();
   }
 
-  getCardsCarousel() {
+  public getCardsCarousel() {
     const pageName = this.functionsUtils.getPageCard('technology');
 
     this.carouselService.getCards(
@@ -38,18 +51,17 @@ export class TechnologyComponent implements OnInit{
         },
 
         error: (error) => {
-          alert("Ops! Ocorreu um erro ao carregar os dados da página!");
-          console.log("Dados do erro: ", error);
+          this.isErrorService = true;
         }
       }
     )
   }
 
-  goToPage(value: any) {
+  public goToPage(value: any) {
     const namePage: TypePage = {
       current: value
     }
 
-    this.changePage.emit(namePage);
+    this.changePage.emit(namePage.current as any);
   }
 }

@@ -1,1 +1,19 @@
-<p>culinary works!</p>
+@if (isErrorService == false) {
+  <app-title
+    [title]="titlePage[0]"
+  >
+  </app-title>
+
+  <app-carousel
+    [dataCard]="dataCard"
+  >
+  </app-carousel>
+
+  <!-- Adicionar o restante da pagina dentro desta condicional -->
+  @if(dataCard.length > 4) {
+    <app-title
+      [title]="titlePage[1]"
+    >
+    </app-title>
+  }
+}

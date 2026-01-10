@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 
-import { Observable, of } from 'rxjs';
+import { Observable, of, throwError } from 'rxjs';
 import { MOCK_MEXT, MOCK_CULINARY, MOCK_HOME, MOCK_TECHNOLOGY } from '../mocks/carousel';
 import { CarouselData } from '../interfaces/carousel/i-carousel';
 
@@ -30,7 +30,7 @@ export class CarouselService {
         return of(MOCK_TECHNOLOGY);
 
       default:
-        return of([] as any);
+        return throwError(() => new Error('A busca no servidor falhou por não ter recebido um parâmetro válido!'));
     }
   }
 

@@ -70,7 +70,7 @@ describe('TechnologyComponent', () => {
 
   describe('goToPage', () => {
     let routeName: TypePage = {
-      current: 'home',
+      current: 'technology',
     };
 
     beforeEach(() => {
@@ -82,9 +82,9 @@ describe('TechnologyComponent', () => {
     it('verificando se a funcao quando chamada, emitiu o evento corretamente', () => {
       component.goToPage(routeName.current);
 
-      expect(spyGoToPage).toHaveBeenCalledWith('home');
+      expect(spyGoToPage).toHaveBeenCalledWith('technology');
 
-      expect(spyOutputChangePage).toHaveBeenCalledWith(routeName);
+      expect(spyOutputChangePage).toHaveBeenCalledWith(routeName.current);
     });
   });
 });

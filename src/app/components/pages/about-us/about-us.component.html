@@ -1,1 +1,87 @@
-<p>about-us works!</p>
+@if(isErrorService == false) {
+  <app-title
+    [title]="titlePage"
+  >
+  </app-title>
+
+  <!-- Adicionar o restante da pagina dentro desta condicional -->
+
+    <div class="container">
+      <div class="content">
+        <div class="group-1">
+          <div class="text">
+            <p>
+              O <span>Grid da Notícia</span> é um site indexador de notícias, desenvolvido por estudantes de tecnologia, que tem o objetivo de trazer as principais informações sobre: <span>Culinária</span>, <span>Espaço Sideral</span> e <span>Tecnologia</span>.
+            </p>
+
+            <p>
+              O nosso principal propósito, é o de promover um site que seja adaptável, seguro e acessível, onde vocês possam se informar das principais notícias dos temas que temos disponíveis, sem se preocupar com as "fake news", nós não tratamos nossos apoiadores como produtos, por isso, muito mais vale seriedade e credibilidade do que "caça clicks".
+            </p>
+          </div>
+
+          <div class="carousel">
+            <p>Carrossel</p>
+          </div>
+        </div>
+
+        <div class="group-2">
+          <div class="text">
+              <h1>Somos</h1>
+          </div>
+
+          <div class="content">
+            <div class="card-container">
+              <div class="card-content">
+                <div class="image-container">
+                  <img src="https://grid-da-noticia.vercel.app/assets/images/sobre_nos_img_adaptaveis_card_sobre_nos.png" alt="Imagem de um computador e smartphone, um ao lado do outro">
+                </div>
+
+                <div class="text-container">
+                  <h3>Adaptáveis:</h3>
+                  <p>
+                    Somos <span>adaptáveis</span>, pois cada tema tem sua própria personalização e identidade, o que mostra o cuidado que temos com a experiência de navegação em nosso site.
+                  </p>
+                </div>
+              </div>
+
+              <div class="card-content">
+                <div class="image-container">
+                  <img src="https://grid-da-noticia.vercel.app/assets/images/sobre_nos_img_seguranca_card_sobre_nos.gif" alt="Imagem simbolizando a segurança digital">
+                </div>
+
+                <div class="text-container">
+                  <h3>Seguros:</h3>
+                  <p>
+                    O Grid da Notícia é <span>seguro</span>, exatamente por prezar pela seriedade e credibilidade do que por "clicks".
+                  </p>
+
+                  <p>
+                    Até nossos parceiros publicitários passam por um rigoroso processo de aprovação, para poderem anunciar conosco, assim como, as notícias que são divulgadas em nossas páginas.
+                  </p>
+                </div>
+              </div>
+
+              <div class="card-content">
+                <div class="image-container">
+                  <img src="https://tribox.com.br/wp-content/uploads/2018/01/capa-ok.jpg" alt="Logo do VLibras">
+                </div>
+
+                <div class="text-container">
+                  <h3>Acessíveis:</h3>
+                  <p>
+                    De nada adianta apoiarmos a causa de mais <span>acessibilidade</span>, se não fizermos a nossa parte.
+                  </p>
+
+                  <p>
+                    Por isso, sentimos orgulho de contar com o plug-in de acessibilidade <span style="color: blueviolet;">VLibras</span> em nosso site.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+}
