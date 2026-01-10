@@ -96,7 +96,7 @@
           color: var(--color-description-card);
           font-size: 17px;
           font-weight: 500;
-          text-align: justify;
+          text-align: start;
 
           @include line-limit(5);
         }
