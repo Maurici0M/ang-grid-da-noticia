@@ -4,8 +4,11 @@
 
 swiper-container {
   background: #eee;
-  display: block;
+  display: flex;
   height: 35em;
+
+  width: auto;;
+  flex-shrink: 0;
 
   box-shadow: var(--box-shadow);
   padding: 0px 50px 0px 50px;
@@ -15,7 +18,7 @@ swiper-container {
     align-items: center;
     font-size: 18px;
     display: flex;
-    width: 100%;
+
 
     /*
       usar o ::ng-dep para modificar estilos dentro de outros componentes
@@ -28,7 +31,7 @@ swiper-container {
 
       .card {
         &.container{
-          width: auto;
+          max-width: 280px;
           height: 470px;
         }
       }
