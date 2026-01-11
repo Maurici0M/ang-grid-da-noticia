@@ -143,3 +143,11 @@
 
     }
 }
+
+@media(max-width: 550px) {
+  ::ng-deep app-title{
+    .title-page {
+      text-align: center !important;
+    }
+}
+}
