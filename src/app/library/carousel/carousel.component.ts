@@ -20,7 +20,7 @@ export class CarouselComponent implements OnInit {
 
   public swiperBreakPoints = {
     0: { slidesPerView: 1, spaceBetween: 0 },
-    660: { slidesPerView: 2, spaceBetween: 30 },
+    660: { slidesPerView: 2, spaceBetween: 15 },
     950: { slidesPerView: 3, spaceBetween: 30 },
     1300: {slidesPerView: 4, spaceBetween: 30}
   }
