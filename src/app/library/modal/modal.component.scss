@@ -1,0 +1,78 @@
+.mat-mdc-dialog-container .mdc-dialog__title{
+  font-family: "Maven Pro", sans-serif;
+  font-weight: 800;
+  color: black;
+}
+
+.mdc-dialog__content {
+  p{
+    font-family: "Maven Pro", sans-serif;
+    font-size: 17px;
+    color: #202020c2;
+    font-weight: 500;
+    line-height: 1.7;
+  }
+}
+
+.mdc-dialog__content > :last-child {
+  margin-bottom: 2px;
+}
+
+.mat-mdc-dialog-surface {
+  background: #fff !important;
+  padding: 40px;
+  border-radius: 25px;
+
+}
+
+.mat-mdc-dialog-actions{
+  gap: 2px;
+}
+
+@media (max-width: 610px) {
+  //mudar o padding do container do modal e ter + espaço em telas menores
+  .mat-mdc-dialog-container .mdc-dialog__surface {
+    padding: 10px;
+  }
+
+  .mdc-dialog__content {
+    p {
+      font-size: unset !important;
+    }
+  }
+
+  //mudando o tamanho do botão primário para ficar mais responsivo em telas menores
+  .mat-mdc-outlined-button.mat-mdc-button-disabled {
+    cursor: default;
+    pointer-events: none;
+    color: var(--mdc-outlined-button-disabled-label-text-color);
+    border-color: var(--mdc-outlined-button-disabled-outline-color);
+    width: 50%;
+  }
+
+  .mat-mdc-button:not(:disabled) {
+    width: 50%;
+  }
+}
+
+@media (max-width: 450px) {
+  //mudando o tamanho do botão primário para ficar mais responsivo em telas menores
+  .mat-mdc-outlined-button[disabled],
+  .mat-mdc-raised-button.mat-mdc-button-disabled, .mat-mdc-button:not(:disabled) {
+    width: 53%;
+  }
+}
+
+@media (max-width: 375px) {
+  .mat-mdc-dialog-container .mdc-dialog__surface {
+    padding: 10px;
+    border-radius: 25px;
+    background-color: #fff;
+  }
+
+  .mat-mdc-dialog-actions .mat-mdc-outlined-button:not(:disabled) {
+    border: solid 0.1px #8a2be2c7;
+    color: #8a2be2c7 !important;
+    width: 60%;
+  }
+}

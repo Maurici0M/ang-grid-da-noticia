@@ -1,0 +1,14 @@
+<h2 mat-dialog-title>{{dataModal.title}}</h2>
+<mat-dialog-content>
+  <p>
+    {{dataModal.description}}
+  </p>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-raised-button mat-dialog-close (click)="primaryButtonClicked()">{{dataModal.primaryButtonName}}</button>
+
+  @if(dataModal.activeSecondaryButton) {
+    <button mat-stroked-button mat-dialog-close cdkFocusInitial (click)="secondaryButtonClicked()">{{dataModal.secondaryButtonName}}</button>
+  }
+
+</mat-dialog-actions>
