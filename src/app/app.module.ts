@@ -4,6 +4,7 @@ import { BrowserModule, provideClientHydration, withEventReplay } from '@angular
 import {MatIconModule} from '@angular/material/icon';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import {MatDialogModule} from '@angular/material/dialog';
+import {MatButtonModule} from '@angular/material/button';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -17,6 +18,7 @@ import { CulinaryComponent } from './components/pages/culinary/culinary.componen
 import { AboutUsComponent } from './components/pages/about-us/about-us.component';
 import { ErrorComponent } from './components/pages/error/error.component';
 import { TitleComponent } from './library/title/title.component';
+import { ModalComponent } from './library/modal/modal.component';
 
 @NgModule({
   declarations: [
@@ -31,13 +33,15 @@ import { TitleComponent } from './library/title/title.component';
     AboutUsComponent,
     ErrorComponent,
     TitleComponent,
+    ModalComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     MatIconModule,
     MatTooltipModule,
-    MatDialogModule
+    MatDialogModule,
+    MatButtonModule
   ],
   providers: [
     provideClientHydration(withEventReplay())
