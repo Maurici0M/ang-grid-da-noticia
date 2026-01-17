@@ -93,15 +93,17 @@
       }
     }
 
-    .copyright {
-      display: flex;
-      flex-direction: column;
-      text-align: center;
-      color: #fff;
-      font-weight: 500;
-      padding-top: 45px;
-      margin: 0 auto;
-    }
+  }
+
+  .copyright {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: #fff;
+    font-weight: 500;
+    padding-top: 45px;
+    padding-bottom: 45px;
+    margin: 0 auto;
   }
 
 }
@@ -130,6 +132,12 @@
 
 @media (max-width: 760px) {
   @include widthGroupItens(50%);
+
+  .footer{
+    .copyright{
+      padding-top: 0px;
+    }
+  }
 }
 
 @media(max-width: 515px) {
