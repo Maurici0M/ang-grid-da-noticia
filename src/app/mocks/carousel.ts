@@ -171,7 +171,7 @@ export const MOCK_HOME: CarouselData = {
 
 export const MOCK_CULINARY: CarouselData = {
   card: [
-    {
+    /*{
       title:
         'Chef Erick Jacquin fala o que não devia e expõe preferência por outro programa: "Muito melhor".',
       description:
@@ -190,7 +190,7 @@ export const MOCK_CULINARY: CarouselData = {
         'https://www.gov.br/turismo/pt-br/assuntos/noticias/sabores-do-brasil-culinaria-brasileira-e-um-dos-principais-impulsionadores-do-turismo/PortalMTur.png/@@images/2f30bc58-6dbb-4a38-8d06-8dc2ced1dc78.png',
       altImg: 'Foto de comidas brasileiras',
       link: 'https://www.gov.br/turismo/pt-br/assuntos/noticias/sabores-do-brasil-culinaria-brasileira-e-um-dos-principais-impulsionadores-do-turismo',
-    },
+    },*/
     {
       title: 'Band renova produção do MasterChef para 2025; saiba detalhes.',
       description:
@@ -246,7 +246,7 @@ export const MOCK_CULINARY: CarouselData = {
       altImg: 'Imagem de um pudim de leite condensado',
       link: 'https://receitas.globo.com/receitas-da-tv/mais-voce/pudim-de-leite-condensado-4d514bb052e0b252bc00e85a.ghtml',
     },
-    {
+    /*{
       title:
         'A arte e o sabor das cachaças brasileiras que conquistam o Brasil e o mundo.',
       description:
@@ -255,7 +255,7 @@ export const MOCK_CULINARY: CarouselData = {
         'https://www.gov.br/turismo/pt-br/assuntos/noticias/a-arte-e-o-sabor-das-cachacas-brasileiras-que-conquistam-o-brasil-e-o-mundo/PortalMTur1.png/@@images/0c711d59-9dc5-44cf-8b03-6689da228745.png',
       altImg: 'Imagem de bebidas alcoólicas brasileras',
       link: 'https://www.gov.br/turismo/pt-br/assuntos/noticias/a-arte-e-o-sabor-das-cachacas-brasileiras-que-conquistam-o-brasil-e-o-mundo',
-    },
+    },*/
   ],
 };
 
