@@ -1,14 +1,16 @@
-<div class="card container">
+<a href={{dataCard.link}} target="_blank">
+  <div class="card container">
 
-  <div class="container content">
-    <div class="content image">
-      <img [src]= "dataCard.srcImg" alt="">
-    </div>
+    <div class="container content">
+      <div class="content image">
+        <img [src]= "dataCard.srcImg" [alt]="dataCard.altImg">
+      </div>
 
-    <div class="content text">
-      <h3>{{ dataCard.title }}</h3>
-      <p>{{ dataCard.description }}</p>
+      <div class="content text">
+        <h3>{{ dataCard.title }}</h3>
+        <p>{{ dataCard.description }}</p>
+      </div>
     </div>
   </div>
-</div>
+</a>
 
