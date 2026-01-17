@@ -78,6 +78,19 @@ export class FooterComponent {
           },
         ]
       }
+    ],
+
+    getToKnow: [
+      {
+        text: 'Carrossel Musical',
+        route: 'https://ang-carrossel-de-musicas.vercel.app/'
+      },
+
+      {
+        text: 'Grid da Notícia',
+        route: 'https://grid-da-noticia.vercel.app/'
+      },
+
     ]
   }
 
@@ -85,6 +98,10 @@ export class FooterComponent {
     this.changePage.emit(
       route
     );
+  }
+
+  public getYear() {
+    return new Date().getFullYear();
   }
 
 }

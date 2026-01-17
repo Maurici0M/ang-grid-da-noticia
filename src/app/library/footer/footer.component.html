@@ -5,7 +5,18 @@
       <div class="group">
         <h4>Veja Também</h4>
           <ul>
-            <li *ngFor="let item of footerData.seeAlso"><a (click)="goToPage(item.route)">{{item.text}}</a></li>
+            <li *ngFor="let item of footerData.seeAlso">
+              <a (click)="goToPage(item.route)">{{item.text}}</a>
+            </li>
+          </ul>
+      </div>
+
+      <div class="group">
+        <h4>Conheça</h4>
+           <ul>
+            <li *ngFor="let item of footerData.getToKnow">
+              <a href={{item.route}} target="_blank">{{item.text}}</a>
+            </li>
           </ul>
       </div>
 
@@ -13,7 +24,9 @@
         <h4>Conecte-se</h4>
 
           <ul>
-            <li *ngFor="let item of footerData.connect"><a (click)="goToPage(item.route)">{{item.text}}</a></li>
+            <li *ngFor="let item of footerData.connect">
+              <a (click)="goToPage(item.route)">{{item.text}}</a>
+            </li>
           </ul>
       </div>
 
@@ -21,7 +34,9 @@
         <h4>Saiba +</h4>
 
           <ul>
-            <li *ngFor="let item of footerData.learnMore"><a (click)="goToPage(item.route)">{{item.text}}</a></li>
+            <li *ngFor="let item of footerData.learnMore">
+              <a (click)="goToPage(item.route)">{{item.text}}</a>
+            </li>
           </ul>
       </div>
 
@@ -35,11 +50,23 @@
             <a *ngFor="let element of item.social"
               href={{element.linkSocialMedia}}
               target="_blank"
-            ><i [ngClass]="element.socialMediaIcon"></i></a>
+            >
+            <i [ngClass]="element.socialMediaIcon"></i>
+          </a>
           </div>
         </div>
 
       </div>
+    </div>
+
+    <div class="copyright">
+      <span>
+        Feito Com Muito Bug e &hearts;
+      </span>
+
+      <span>
+        &copy; 2023 -> {{getYear()}}
+      </span>
     </div>
   </div>
 </footer>
