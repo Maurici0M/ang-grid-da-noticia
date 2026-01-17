@@ -46,8 +46,6 @@ export class CulinaryComponent implements OnInit {
     {
       next: (data) => {
         this.dataCard = data.card;
-
-        console.log(data.card.length);
       },
       error: (error) => {
         console.log("Erro: " + error.message);

@@ -45,7 +45,7 @@ export class CarouselComponent implements OnInit {
   public dataErrorService: ErrorData = {
     title: 'Mil desculpas!',
     description: 'Não conseguimos nos conectar ao servidor, já estamos trabalhando para solucionar isto o mais rápido possível.',
-    srcImg: 'https://media.giphy.com/media/3b8OYv6DwPs4g/giphy.gif',
+    srcImg: 'assets/gif/stitch_giphy.gif',
     altImg: 'Stich olhando pela janela e indo embora'
   }
 

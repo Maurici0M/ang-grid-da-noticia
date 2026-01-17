@@ -21,15 +21,15 @@ export class ContainerPagesComponent implements OnInit {
   public dataErrorNotFound: ErrorData = {
     title: 'Página não encontrada!',
     description: 'Poxa vida, não conseguimos encontrar a página solicitada! Ela pode ter sido desativada ou está em manutenção.',
-    srcImg: 'https://imgs.search.brave.com/yTFFCXS-rkM2uu4NlA5GqaKR0WcYlzoIObKHjVIwzpY/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJiYXQuY29t/L2ltZy83NDQyOTkt/d2FsbHBhcGVyLTRr/LXdhbGwtZS0yMDIw/LTRrLXdhbGxwYXBl/ci5qcGc',
+    srcImg: 'assets/static/wall-e-image.png',
     altImg: 'Robô Wall-e olhando para o céu vazio'
   }
 
   public dataErrorService: ErrorData = {
     title: 'Mil desculpas!',
     description: 'Não conseguimos nos conectar ao servidor. Já estamos trabalhando para solucionar isto o mais rápido possível.',
-    srcImg: 'https://media.giphy.com/media/3b8OYv6DwPs4g/giphy.gif',
-    altImg: 'Stich olhando pela janela e indo embora'
+    srcImg: 'assets/gif/construction_giphy.gif',
+    altImg: 'Gif de um canteiro de obras'
   }
 
   public dataModal: DataModal = {

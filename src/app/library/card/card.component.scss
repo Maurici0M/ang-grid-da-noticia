@@ -46,9 +46,11 @@
 }
 
 .card {
+  transition: all ease-in-out 0.5s;
 
   &:hover {
     box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    transform: scale(1.03);
   }
 
   &.container {

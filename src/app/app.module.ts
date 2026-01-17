@@ -19,6 +19,7 @@ import { AboutUsComponent } from './components/pages/about-us/about-us.component
 import { ErrorComponent } from './components/pages/error/error.component';
 import { TitleComponent } from './library/title/title.component';
 import { ModalComponent } from './library/modal/modal.component';
+import { FooterComponent } from './library/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { ModalComponent } from './library/modal/modal.component';
     ErrorComponent,
     TitleComponent,
     ModalComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
