@@ -19,5 +19,7 @@ export interface DataFooter {
 
   learnMore: FooterItem[],
 
-  followUs: FooterItemSocialMedia[]
+  followUs: FooterItemSocialMedia[],
+
+  getToKnow: FooterItem[]
 }
