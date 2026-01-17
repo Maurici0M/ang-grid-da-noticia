@@ -1,0 +1,45 @@
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+
+      <div class="group">
+        <h4>Veja Também</h4>
+          <ul>
+            <li *ngFor="let item of footerData.seeAlso"><a (click)="goToPage(item.route)">{{item.text}}</a></li>
+          </ul>
+      </div>
+
+      <div class="group">
+        <h4>Conecte-se</h4>
+
+          <ul>
+            <li *ngFor="let item of footerData.connect"><a (click)="goToPage(item.route)">{{item.text}}</a></li>
+          </ul>
+      </div>
+
+      <div class="group">
+        <h4>Saiba +</h4>
+
+          <ul>
+            <li *ngFor="let item of footerData.learnMore"><a (click)="goToPage(item.route)">{{item.text}}</a></li>
+          </ul>
+      </div>
+
+      <div class="group">
+        <h4>Nos Siga</h4>
+
+        <div class="content" *ngFor="let item of footerData.followUs">
+          <span>{{item.text}}</span>
+
+          <div class="social-media-icons">
+            <a *ngFor="let element of item.social"
+              href={{element.linkSocialMedia}}
+              target="_blank"
+            ><i [ngClass]="element.socialMediaIcon"></i></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</footer>
